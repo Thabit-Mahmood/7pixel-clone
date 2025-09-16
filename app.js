@@ -1,11 +1,8 @@
 (() => {
-
-  const { BrowserRouter, Routes, Route, Link } = ReactRouterDOM;
-
-
+  // Destructure only the components we need from ReactRouterDOM
+  const { Routes, Route, Link } = ReactRouterDOM;
+  // Use HashRouter for client-side routing and alias it as BrowserRouter
   const BrowserRouter = ReactRouterDOM.HashRouter;
-  
-  
 
   function NavBar() {
     return (
@@ -549,7 +546,11 @@
 
   function App() {
     return (
-      <BrowserRouter>
+      {/*
+       * Use the `basename` prop on BrowserRouter to set the base URL path.
+       * This is necessary when deploying the app under a subpath on GitHub Pages.
+       */
+      <BrowserRouter basename="/7pixel-clone">
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
