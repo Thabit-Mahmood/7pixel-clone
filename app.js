@@ -545,26 +545,23 @@
   }
 
   function App() {
-    return (
-      {/*
-       * Use the `basename` prop on BrowserRouter to set the base URL path.
-       * This is necessary when deploying the app under a subpath on GitHub Pages.
-       */
-      <BrowserRouter basename="/7pixel-clone">
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/audio" element={<AudioPage />} />
-          <Route path="/video-displays" element={<VideoDisplaysPage />} />
-          <Route path="/lighting" element={<LightingPage />} />
-          <Route path="/projection" element={<ProjectionPage />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    );
+        return (
+          // Use the `basename` prop on BrowserRouter to set the base URL path when deploying under a subpath on GitHub Pages
+          <BrowserRouter basename="/7pixel-clone">
+            <NavBar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/audio" element={<AudioPage />} />
+              <Route path="/video-displays" element={<VideoDisplaysPage />} />
+              <Route path="/lighting" element={<LightingPage />} />
+              <Route path="/projection" element={<ProjectionPage />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+            <Footer />
+          </BrowserRouter>
+        );
   }
 
   ReactDOM.createRoot(document.getElementById('root')).render(<App />);
