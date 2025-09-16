@@ -17,6 +17,7 @@
   <!-- Babel compiler for JSX (standalone) -->
   <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <!-- Main Application compiled on the fly with Babel -->
-  <script type="text/babel" src="app.js"></script>
+  <!-- Use data-presets to allow Babel to compile JSX and modern JS from external file -->
+  <script type="text/babel" data-presets="env,react" src="app.js"></script>
 </body>
 </html>
