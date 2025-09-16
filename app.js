@@ -1,5 +1,11 @@
 (() => {
+
   const { BrowserRouter, Routes, Route, Link } = ReactRouterDOM;
+
+
+  const BrowserRouter = ReactRouterDOM.HashRouter;
+  
+  
 
   function NavBar() {
     return (
